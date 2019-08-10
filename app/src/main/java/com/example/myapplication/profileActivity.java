@@ -48,11 +48,13 @@ public class profileActivity extends AppCompatActivity {
     }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        final EditText firstName=findViewById(R.id.fName);
+
         Intent resultFromConfirmActivity=getIntent();
         if (requestCode == 1100) {
             if (resultCode == RESULT_OK) {
                 PreferenceManager.getDefaultSharedPreferences(profileActivity.this).edit()
-                        .putString("fullName",resultFromConfirmActivity.getStringExtra("savedName")).apply();
+                        .putString("fullName","Hello"+firstName.getText().toString()).apply();
                 //Log.d("sepehr",getIntent().getStringExtra("Name"));
                 Toast profileConfirmed = Toast.makeText(profileActivity.this,"Profile Confirmed and saved",Toast.LENGTH_LONG);
                 profileConfirmed.show();

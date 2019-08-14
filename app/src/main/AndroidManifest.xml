@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".confirmActivity"></activity>
+        <activity android:name=".pictureActivity"></activity>
+        <activity android:name=".dialActivity" />
+        <activity android:name=".confirmActivity" />
         <activity android:name=".profileActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
